@@ -77,6 +77,43 @@ If this is unacceptable, the user can disable iCloud sync and use manual JSON ex
 
 If you find a bug, the only way we can help is if you describe it in words.
 
+## Device-level security
+
+This app's privacy guarantees stop at the boundary of your phone. Everything inside the app — transactions, budgets, household identity, sync settings — is only as secure as the device it lives on.
+
+**Recommended (per device):**
+
+- **Strong device passcode** — at least 6 digits, ideally an alphanumeric passphrase. Avoid 4-digit PINs.
+- **Face ID enabled** — so the device locks automatically and unlock requires biometric confirmation.
+- **iOS Screen Time per-app lock** — Settings → Screen Time → App Limits → set a 1-minute limit on the DNA Budget PWA. Anyone who picks up the unlocked phone needs the Screen Time passcode to open the app. Coarse, but an effective second factor.
+
+If a phone is lost or stolen, the device lock is the last line of defense — not this app.
+
+## CSV export sensitivity
+
+The CSV exports this app produces contain unredacted financial data:
+
+- The **Full** export — every transaction with descriptions, amounts, categories, and user attribution.
+- The **Business-only (Schedule C)** export — gross 1099 income, business expenses, and any merchant or client names that appear in transaction descriptions.
+- The **Mileage log** export — odometer readings, business-use percentage, and computed deductions.
+
+These files are intended for the household's own records or transmission to a tax accountant. **Treat them like tax documents, not casual attachments.**
+
+**Safe transmission:**
+
+- Encrypted email (Proton Mail, Outlook secure mode)
+- Password-protected ZIP — send the password through a different channel than the file (text, not email)
+- The accountant's secure portal (most professional accountants offer one)
+- Direct file transfer (AirDrop, USB drive)
+
+**Unsafe transmission:**
+
+- Plain email (Gmail, Yahoo, ISP webmail) — readable by intermediaries
+- Slack, WhatsApp, SMS, iMessage to non-household contacts — message history is retained by the platform
+- Public cloud uploads (Imgur, pastebin, public Dropbox links) — even temporarily
+
+These export files never enter the GitHub repository — `.gitignore` blocks the patterns `transactions-*.csv`, `*-export.csv`, `schedule-c-*.csv`, and `mileage-log-*.csv`. The only ways a CSV can leak are user-driven, so be deliberate about where they go.
+
 ## Contributing
 
 If you submit a pull request:
