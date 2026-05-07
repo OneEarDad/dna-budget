@@ -103,10 +103,9 @@ npm run build
 
 # Preview production build (test PWA install locally)
 npm run preview
-
-# Deploy to GitHub Pages (after build)
-npm run deploy
 ```
+
+Deploys are automatic via GitHub Actions on push to `main` — see `.github/workflows/deploy.yml`. There is no `npm run deploy` script.
 
 ## Testing expectations
 
