@@ -1,0 +1,21 @@
+# Personal-name watchlist for the pre-commit privacy scan.
+# Each line is a name to block (case-sensitive, word-boundary matched).
+# Comments (lines starting with #) and blank lines are ignored.
+#
+# This file is committed as a TEMPLATE. The hook reads from
+# .husky/personal-names.txt (which is gitignored). To use:
+#
+#   cp .husky/personal-names.example.txt .husky/personal-names.txt
+#
+# Then edit the copy with your household's real names. Never put real
+# names in this example file — it's public.
+
+# Example placeholders — replace these in personal-names.txt:
+PrimaryUserName
+SecondaryUserName
+
+# Add child names, partner names, or other identifying terms below.
+# Note: single-character initials (any standalone uppercase letter)
+# will produce false positives in code — variable names, JSX
+# components, and comments often contain bare letters. Comment those
+# entries out in personal-names.txt if the noise gets annoying.

@@ -49,3 +49,20 @@ mileage-log-*.csv
 
 # Claude Code harness state — local-only, not part of the app.
 .claude/
+
+# Gitignored config for the personal-data pre-commit hook. Real first
+# names live here; never commit. Use .husky/personal-names.example.txt
+# (committed) as the template.
+.husky/personal-names.txt
+
+# ──────────────────────────────────────────────────────────────────────
+# macOS / Apple metadata (forward-compatibility for potential Mac use
+# or iCloud-shared folders, per DNA_BUDGET_SPEC.md §12 audit)
+# ──────────────────────────────────────────────────────────────────────
+.AppleDouble/
+.LSOverride
+Icon?
+.Spotlight-V100
+.fseventsd/
+.TemporaryItems/
+.iCloud

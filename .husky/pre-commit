@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+# Husky 9 invokes hooks with `sh -e`, so the shebang above matters.
+# All actual logic lives in scan-personal-data.mjs (more reliable than
+# POSIX shell). Per SECURITY.md and DNA_BUDGET_SPEC.md §12.
+node "$(dirname "$0")/scan-personal-data.mjs"
