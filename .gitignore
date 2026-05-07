@@ -1,0 +1,51 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ──────────────────────────────────────────────────────────────────────
+# Personal data — DO NOT REMOVE without owner approval (see SECURITY.md)
+# ──────────────────────────────────────────────────────────────────────
+
+# Private companion specification with real budget numbers, recurring
+# transactions, kid initials, and household financial context. NEVER
+# commit this file to the public repository.
+DNA_BUDGET_SPEC.md
+
+# Real seed values for this household. The committed `defaults.example.ts`
+# ships with placeholder structure; `defaults.ts` contains real budgets.
+# (File doesn't exist yet — gitignored pre-emptively as defense in depth.)
+src/data/defaults.ts
+
+# Defense-in-depth: anything explicitly marked private.
+*.private.*
+
+# CSV exports may contain real transaction history, income, mileage, or
+# Schedule C detail (per DNA_BUDGET_SPEC.md §6.10). Never commit.
+transactions-*.csv
+*-export.csv
+schedule-c-*.csv
+mileage-log-*.csv
+
+# Claude Code harness state — local-only, not part of the app.
+.claude/
